@@ -15,13 +15,11 @@
   <meta property="og:description" content="Discover princezain - official website with latest updates and content.">
   <meta property="og:url" content="https://princezain.netlify.app/">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="princezain.netlify.app/examplelogo.png>
+  <meta property="og:image" content="princezain.netlify.app/examplelogo.png">
 
-
-  
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Free Tricks</title>
+
   <style>
     * {
       margin: 0;
@@ -37,14 +35,15 @@
       justify-content: center;
       align-items: center;
       min-height: 100vh;
+      padding: 20px;
     }
 
     .container {
       background-color: #1c1c1c;
       border-radius: 12px;
       padding: 20px;
-      max-width: 400px;
-      width: 90%;
+      max-width: 600px; /* looks better on desktop */
+      width: 100%;
       box-shadow: 0 0 15px rgba(0,0,0,0.5);
     }
 
@@ -52,21 +51,31 @@
       display: flex;
       align-items: center;
       margin-bottom: 20px;
-      
+      flex-wrap: wrap;
+      gap: 10px;
     }
 
-    .logo img {
+    .logo img.main-logo {
       border-radius: 50%;
       border: 1px solid #61a9fb;
       width: 90px;
       height: 90px;
-      border-radius: 50%;
-      margin-right: 15px;
+      object-fit: cover;
     }
 
     .logo h1 {
-      font-size: 20px;
+      font-size: 22px;
       font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    /* Small icons beside text */
+    .logo h1 img {
+      width: 20px;
+      height: 20px;
     }
 
     .btn {
@@ -84,9 +93,10 @@
     }
 
     .btn img {
-      width: 30px;
-      height: 30px;
+      width: 26px;
+      height: 26px;
       margin-left: 10px;
+      object-fit: contain;
     }
 
     .btn:hover {
@@ -94,7 +104,7 @@
       opacity: 0.9;
     }
 
-    /* Custom colors like in screenshot */
+    /* Custom button colors */
     .whatsapp { background: linear-gradient(90deg, #25D366, #128C7E); }
     .tiktok { background: #e74c3c; }
     .bonus { background: #555; }
@@ -103,33 +113,19 @@
     .jazz-red { background: #c0392b; }
     .jazz-vm { background: #2c3e50; }
 
-    /* Responsive */
+    /* Responsive for smaller screens */
     @media(max-width: 500px) {
       .logo h1 {
-        font-size: 22px;
+        font-size: 18px;
       }
       .btn {
-        font-size: 15px;
-        padding: 20px;
+        font-size: 14px;
+        padding: 14px;
       }
-            
-        #bluet{
-            position: absolute;
-            left: 106px;
-            top: 209px;
-            width: 19px;
-            height: 19px;
-
-        }
-        
-        #tickbg{
-            position: absolute;
-            left: 105px;
-            top: 208px;
-            width: 20px;
-            height: 20px;
-
-        }
+      .btn img {
+        width: 22px;
+        height: 22px;
+      }
     }
   </style>
 </head>
@@ -137,14 +133,13 @@
 
   <div class="container">
     <!-- Logo Section -->
-    
-       <img id="tickbg" src="tickbg.png">
-      <img id="bluet" src="bluet.png">
-    
     <div class="logo">
-    
-      <img src="examplelogo.png" alt="Logo">
-      <h1>FREE TRICKS</h1>
+      <img src="examplelogo.png" alt="Logo" class="main-logo">
+      <h1>
+        FREE TRICKS
+        <img src="tickbg.png" alt="Tick">
+        <img src="bluet.png" alt="Bluet">
+      </h1>
     </div>
 
     <!-- Buttons -->
@@ -157,7 +152,6 @@
       TikTok Auto Liker
       <img src="tiktok.png" alt="TikTok">
     </a>
-
 
     <a href="http://portal.tamashaweb.com/" class="btn jazz-purple">
       JAZZ TAMASHA 25GB
@@ -173,15 +167,7 @@
       JAZZ FREE 400 MB
       <img src="Jazz.png" alt="Jazz">
     </a>
-    
-    
-    
-    
-    
   </div>
 
-  <script>
-  
-  </script>
 </body>
 </html>
